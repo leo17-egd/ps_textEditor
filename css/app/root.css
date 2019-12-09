@@ -1,0 +1,22 @@
+:root{
+
+    /*Mode*/
+    --primary: rgb(255, 255, 255);
+    --secondary: rgb(31, 31, 31);
+
+    /*Colors*/
+    --blue: rgb(17, 85, 153);
+    --red: rgb(153, 17, 0);
+    --green: rgb(17, 153, 85);
+    --yellow: rgb(255, 221, 85);
+
+    /*Font*/
+    --font: "Lato";
+
+    /*Border Radius*/
+    --square: 0px;
+    --circle: 100%;
+
+    /**/
+
+}

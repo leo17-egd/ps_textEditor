@@ -1,0 +1,52 @@
+#textEditor-panel{
+    color: var(--secondary);
+    text-align: left;
+    display: block;
+    background: linear-gradient(to bottom, rgba(17, 85, 153, 0.15), rgba(17, 85, 153, 0.15));
+    padding: 5px 5px;
+}
+
+#textEditor-panel button, #textEditor-panel select, #textEditor-panel input{
+    background: var(--primary);
+    font-size: 15px;
+    margin: 2px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0.05vw 0.05vw 0.25vw grey;
+    cursor: pointer;
+    transition: 0.25 all;
+}
+
+#textEditor-panel button:hover, #textEditor-panel select:hover, #textEditor-panel input:hover{
+    background: lightgrey;
+}
+
+#textEditor-panel button:active{
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+
+#textEditor-panel .space-v{
+    display: inline-block;
+    width: 10px;
+    text-align: center;
+
+}
+
+#textEditor-panel input[type='text']{
+    width: 750px !important;
+    cursor: auto;
+}
+
+#textEditor-panel input[type='color']{
+    padding: 4.5px 10px !important;
+}
+
+#textEditor-box{
+    width: 100%;
+    height: 750px;
+    border: none;
+    box-shadow: 0.05vw 0.05vw 0.25vw grey;
+}

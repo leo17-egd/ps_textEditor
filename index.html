@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+
+        <meta http-equiv="Content-Security-Policy" content="default-src * data: blob: ws: wss: gap://ready file://*;style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval';connect-src * ws: wss:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta charset="utf-8"/>
+
+        <link rel="stylesheet" type="text/css" href="library/fontAwesome/css/all.css">
+        <link rel="stylesheet" type="text/css" href="css/app/all.css">
+
+        <title>PonicSoft - Text editor</title>
+
+    </head>    
+    <body>
+
+        <article id="textEditor-panel">
+            <i class="far fa-font"></i>
+            <select class="cmd-arg" data-cmd="fontName">
+                <option value="Arial">Arial</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Courier">Courier</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+            <div class="space-v"></div>
+            <i class="far fa-text-size"></i>
+            <select class="cmd-arg" data-cmd="fontSize">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <div class="space-v"></div>
+            <i class="far fa-paint-brush-alt"></i>
+            <input class="cmd-arg" data-cmd="foreColor" type="color"/>
+            <div class="space-v"></div>
+            <i class="far fa-paint-roller"></i>
+            <input class="cmd-arg" data-cmd="hiliteColor" type="color"/>
+            <div class="space-v"></div>
+            <i class="far fa-heading"></i>
+            <select>
+                <option value="H1"><h1>Muy grande</h1></option>
+                <option value="H2"><h2>Grande</h2></option>
+                <option value="H3" selected><h3>Normal</h3></option>
+                <option value="H4"><h4>Mediano</h4></option>
+                <option value="H5"><h5>Pequeño</h5></option>
+                <option value="H6"><h6>Muy pequeño</h6></option>
+            </select>
+            <div class="space-v"></div>
+            <button class="cmd" data-cmd="undo"><i class="far fa-undo"></i></button>
+            <button class="cmd" data-cmd="redo"><i class="far fa-redo"></i></button>
+            <div class="space-v">|</div>
+            <button class="source">Ver codigo HTML</button>
+            <button class="edit">Modo edición</button>
+            <br>
+            <button class="cmd" data-cmd="bold"><i class="far fa-bold"></i></button>
+            <button class="cmd" data-cmd="italic"><i class="far fa-italic"></i></button>
+            <button class="cmd" data-cmd="underline"><i class="far fa-underline"></i></button>
+            <button class="cmd" data-cmd="strikeThrough"><i class="far fa-strikethrough"></i></button>
+            <div class="space-v">|</div>
+            <button class="cmd" data-cmd="justifyLeft"><i class="far fa-align-left"></i></button>
+            <button class="cmd" data-cmd="justifyCenter"><i class="far fa-align-center"></i></button>
+            <button class="cmd" data-cmd="justifyRight"><i class="far fa-align-right"></i></button>
+            <button class="cmd" data-cmd="justifyFull"><i class="far fa-align-justify"></i></button>
+            <div class="space-v">|</div>
+            <button class="cmd" data-cmd="cut"><i class="far fa-cut"></i></button>
+            <button class="cmd" data-cmd="copy"><i class="far fa-copy"></i></button>
+            <div class="space-v">|</div>
+            <button class="cmd" data-cmd="indent"><i class="far fa-indent"></i></button>
+            <button class="cmd" data-cmd="outdent"><i class="far fa-outdent"></i></button>
+            <div class="space-v">|</div>
+            <button class="cmd" data-cmd="subscript"><i class="far fa-subscript"></i></button>
+            <button class="cmd" data-cmd="superscript"><i class="far fa-superscript"></i></button>
+            <div class="space-v">|</div>
+            <button class="cmd" data-cmd="insertUnorderedList"><i class="far fa-list-ul"></i></button>
+            <button class="cmd" data-cmd="insertOrderedList"><i class="far fa-list-ol"></i></button>
+            <div class="space-v">|</div>
+            <button class="cmd" data-cmd="insertParagraph"><i class="far fa-paragraph"></i></button>
+            <button class="cmd-prompt" data-cmd="createLink" data-text="Insertar URL"><i class="far fa-link"></i></button>
+            <button class="cmd" data-cmd="unlink"><i class="far fa-unlink"></i></button>
+            <button class="cmd-prompt" data-cmd="insertImage" data-text="Insertar URL de la imagen"><i class="far fa-file-image"></i></button>
+            <div class="space-v">|</div>
+            <button class="cmd" data-cmd="insertHorizontalRule">Salto de linea</button>
+            <button class="cmd" data-cmd="selectAll">Seleccionar todo</button>
+        </article>
+        
+        <iframe id="textEditor-box" name="boxTextEditor"></iframe>
+
+
+        <script type="text/javascript" src="library/jQuery/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="js/template/index.js"></script>
+
+    </body>
+</html>
